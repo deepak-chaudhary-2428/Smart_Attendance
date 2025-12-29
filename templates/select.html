@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select U.G Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 30px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            background: #4ad9c2;
+            color: white;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<h2>Select U.G Course</h2>
+
+<div class="container">
+    <div class="box" onclick="location.href='/s_class?course=BCA'">BCA</div>
+    <div class="box" onclick="location.href='/s1_class?course=BTECH'">B.Tech</div>
+    <div class="box" onclick="location.href='/attendance?course=BBA'">BBA</div>
+    <div class="box" onclick="location.href='/attendance?course=BCOM'">B.Com</div>
+    <div class="box" onclick="location.href='/attendance?course=BSC'">B.Sc</div>
+</div>
+
+</body>
+</html>

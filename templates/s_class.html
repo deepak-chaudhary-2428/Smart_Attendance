@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Subject</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 30px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .subject {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .subject:hover {
+            background: #5da9ff;
+            color: white;
+            transform: translateY(-5px);
+        }
+        #n1:hover {
+        background: Red;
+            color: white;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<h2>Select Subject</h2>
+
+<div class="container">
+    <div class="subject" onclick="location.href='/attendance?subject=Python'">Python</div>
+    <div class="subject" onclick="location.href='/attendance?subject=OS'">Operating System</div>
+    <div class="subject" onclick="location.href='/attendance?subject=IT'">IT</div>
+    <div class="subject" onclick="location.href='/attendance?subject=CS'">Communication Skill</div>
+    <div class="subject" id="n1" onclick="location.href='/dashboard?subject=update'">Add/Remove</div>
+</div>
+
+</body>
+</html>
