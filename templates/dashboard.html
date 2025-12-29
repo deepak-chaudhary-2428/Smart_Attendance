@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        h2, h3 {
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+
+        /* Add Student Form */
+        form.add-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        input[name="name"] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input[name="name"]:focus {
+            outline: none;
+            border-color: #2a5298;
+            box-shadow: 0 0 6px rgba(42,82,152,0.4);
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: #2a5298;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1e3c72;
+        }
+
+        /* Student List */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #f8f9fc;
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li form button {
+            background: #ff6b6b;
+        }
+
+        li form button:hover {
+            background: #e84141;
+        }
+
+        /* Attendance Button */
+        .attendance-link {
+            display: block;
+            margin-top: 25px;
+            text-align: center;
+            padding: 12px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .attendance-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Add Student</h2>
+    <form method="post" action="/dashboard" class="add-form">
+        <input name="name" placeholder="Student Name" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <h3>Students</h3>
+    <ul>
+        {% for s in students %}
+        <li>
+            {{ s.name }}
+            <form method="post" action="/dashboard" style="display:inline;">
+                <input type="hidden" name="delete_id" value="{{ s.id }}">
+                <button type="submit">Remove</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/s_class" class="attendance-link">Mark Attendance</a>
+
+</div>
+
+</body>
+</html>

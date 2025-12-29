@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Teacher Login</title>
+<style>
+  body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+
+  form{
+    background: #ffffff;
+    padding: 30px 35px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    width: 300px;
+    text-align: center;
+  }
+
+  h2{
+    margin-bottom: 20px;
+    color: #1e3c72;
+    letter-spacing: 1px;
+  }
+
+  .n, .p{
+    height: 38px;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .n:focus, .p:focus{
+    outline: none;
+    border-color: #2a5298;
+    box-shadow: 0 0 8px rgba(42,82,152,0.4);
+  }
+
+  .b{
+    margin-top: 22px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .b:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+</style>
+
+</head>
+
+<body>
+
+<form method="post">
+  <h2>Teacher Login</h2>
+  <input name="username" placeholder="Username" class="n" required><br>
+  <input name="password" type="password" placeholder="Password" class="p" required><br>
+  <button class="b" type="submit">Login</button>
+</form>
+
+</body>
+</html>

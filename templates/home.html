@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            height: 150px;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .attendance { background: #4ad9c2; }
+        .fee { background: #ff6b81; }
+        .achievement { background: #5da9ff; }
+        .course { background: #ffbe55; color: #333; }
+    </style>
+</head>
+<body>
+
+<div class="breadcrumb">
+    🏠 Home &gt; Dashboard
+</div>
+
+<div class="dashboard">
+    <div class="card attendance" onclick="location.href='/select'">
+        U.G
+    </div>
+
+    <div class="card fee">
+        P.G
+    </div>
+
+    <div class="card achievement">
+        Achievements <br><br> 0
+    </div>
+
+    <div class="card course">
+        Recheck
+    </div>
+</div>
+
+</body>
+</html>

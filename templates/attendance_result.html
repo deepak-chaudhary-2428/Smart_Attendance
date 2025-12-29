@@ -1,0 +1,13 @@
+<h2>Attendance Submitted</h2>
+
+<h3>Students Attendance</h3>
+<ul>
+  {% for r in records %}
+    <li>
+      {{ r.name }} — <strong>{{ r.status }}</strong>
+    </li>
+  {% endfor %}
+</ul>
+
+<br>
+<a href="/dashboard">⬅ Back to Home</a>

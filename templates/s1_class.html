@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Subject</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 30px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .subject {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .subject:hover {
+            background: #5da9ff;
+            color: white;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<h2>Select Subject</h2>
+
+<div class="container">
+    <div class="subject" onclick="location.href='?subject=S1'">S1</div>
+    <div class="subject" onclick="location.href='?subject=S2'">S2</div>
+    <div class="subject" onclick="location.href='?subject=S3'">S3</div>
+    <div class="subject" onclick="location.href='?subject=S4'">S4</div>
+    <div class="subject" onclick="location.href='/dashboard?subject=update'">Add/Remove</div>
+</div>
+
+</body>
+</html>
